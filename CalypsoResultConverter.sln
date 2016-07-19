@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalypsoResultConverter", "CalypsoResultConverter\CalypsoResultConverter.csproj", "{6FDA66BC-7F72-4074-B83C-83D10D4A22FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{6E6D10E8-48BD-4944-B30C-8B00619A7140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FDA66BC-7F72-4074-B83C-83D10D4A22FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDA66BC-7F72-4074-B83C-83D10D4A22FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDA66BC-7F72-4074-B83C-83D10D4A22FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDA66BC-7F72-4074-B83C-83D10D4A22FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6D10E8-48BD-4944-B30C-8B00619A7140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6D10E8-48BD-4944-B30C-8B00619A7140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6D10E8-48BD-4944-B30C-8B00619A7140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6D10E8-48BD-4944-B30C-8B00619A7140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
