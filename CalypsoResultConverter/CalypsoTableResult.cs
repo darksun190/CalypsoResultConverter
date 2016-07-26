@@ -17,14 +17,14 @@ namespace CalypsoResultConverter
 
         Queue<string> fet_file_queue = new Queue<string>();
         FileSystemWatcher FSW = new FileSystemWatcher();
-        public CalypsoTableResult(string directory_path):
+        public CalypsoTableResult(string directory_path) :
             this(new DirectoryInfo(directory_path))
         {
-            
+
         }
         public CalypsoTableResult(DirectoryInfo di)
         {
-            if(!di.Exists)
+            if (!di.Exists)
             {
                 throw new DirectoryNotFoundException(string.Format("Path: {0} didn't exist", di.FullName));
             }
@@ -69,21 +69,17 @@ namespace CalypsoResultConverter
                 )
             {
                 System.Threading.Thread.Sleep(1000);
-                CharacteristicTable chrContent = new CharacteristicTable(chrFile);
-                FeatureTable fetContent = new FeatureTable(fetFile);
-                HeaderTable hdrContent = new HeaderTable(hdrFile);
-                OperationResult OR = new OperationResult()
-                {
-                    CharData = chrContent,
-                    FeatureData = fetContent,
-                    HeaderData = hdrContent
-                };
+              
+                OperationResult OR = getORfromFile(hdrFile, chrFile, fetFile);
+               
                 ResultAdded(this, new CalypsoResultEventArgs(OR));
-                
+
             }
 
 
         }
+
+
         private bool checkHdrChrFile(string file_name)
         {
 
@@ -102,6 +98,18 @@ namespace CalypsoResultConverter
             }
             return false;
         }
-          
+        public static OperationResult getORfromFile(FileInfo hdrFile, FileInfo chrFile, FileInfo fetFile)
+        {
+            CharacteristicTable chrContent = new CharacteristicTable(chrFile);
+            FeatureTable fetContent = new FeatureTable(fetFile);
+            HeaderTable hdrContent = new HeaderTable(hdrFile);
+            OperationResult OR = new OperationResult()
+            {
+                CharData = chrContent,
+                FeatureData = fetContent,
+                HeaderData = hdrContent
+            };
+            return OR;
+        }
     }
 }
