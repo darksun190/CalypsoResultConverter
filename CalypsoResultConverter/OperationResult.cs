@@ -7,9 +7,21 @@ namespace CalypsoResultConverter
 {
     public class OperationResult
     {
-        public HeaderTable HeaderData;
-        public FeatureTable FeatureData;
-        public CharacteristicTable CharData;
+        public HeaderTable HeaderData
+        {
+            get;
+            set;
+        }
+        public FeatureTable FeatureData
+        {
+            get;
+            set;
+        }
+        public CharacteristicTable CharData
+        {
+            get;
+            set;
+        }
 
     }
 }

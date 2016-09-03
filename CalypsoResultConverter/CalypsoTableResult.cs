@@ -17,11 +17,19 @@ namespace CalypsoResultConverter
 
         Queue<string> fet_file_queue = new Queue<string>();
         FileSystemWatcher FSW = new FileSystemWatcher();
+        /// <summary>
+        /// initialize the class by path of the diretory
+        /// </summary>
+        /// <param name="directory_path">directory path of the Calypso save the Table files</param>
         public CalypsoTableResult(string directory_path) :
             this(new DirectoryInfo(directory_path))
         {
 
         }
+        /// <summary>
+        /// initialize the class by a directoryInfo
+        /// </summary>
+        /// <param name="di">directory info of the path which Calypso save the Table files</param>
         public CalypsoTableResult(DirectoryInfo di)
         {
             if (!di.Exists)
